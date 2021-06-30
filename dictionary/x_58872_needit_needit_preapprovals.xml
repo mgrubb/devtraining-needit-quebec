@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Needit PreApprovals" max_length="40" name="x_58872_needit_needit_preapprovals" sizeclass="2" type="collection">
+        <element label="Approved for" mandatory="true" max_length="32" name="approved_for" reference="sys_user" type="reference"/>
+        <element display="true" label="Expires on" max_length="40" name="expires_on" type="glide_date"/>
+        <element label="Profile" mandatory="true" max_length="32" name="profile" reference="x_58872_needit_needit_profiles" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <index name="index">
+            <element name="approved_for"/>
+        </index>
+        <index name="index2">
+            <element name="profile"/>
+        </index>
+    </element>
+</database>
